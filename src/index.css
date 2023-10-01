@@ -1,13 +1,217 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@400;700;800&family=Manrope:wght@600;800&family=Noto+Sans:wght@300;400&family=Roboto&family=Varela+Round&display=swap');
+
+:root {
+  --color-bg: #f6f7fa;
+  --color-gradient: linear-gradient(0deg, rgba(193,234,244,0.5) 29%, rgba(234,208,246,0.9) 77%);
+  --color-text: rgba(40, 40, 41, 0.8);
+  --color-hover: #66DED7;
+  --color-icon: #AFAFD5;
+  --color-btn: rgba(102, 222, 215, 0.6);
+  --active-icon: #A2F4F4;
+  --scrollbar-color: rgb(198, 199, 200);
+  --scrollbar-thumb-color: rgba(102, 222, 215, 0.4);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+[data-theme='dark'] {
+  --color-bg: #363349;
+  --color-text: rgba(246, 247, 250, 0.8);
+  --scrollbar-color: rgba(36, 35, 50, 0.8);
 }
+
+* {
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5vw;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(2, 19, 30);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgba(94, 91, 112, 0.5);;
+}
+
+
+
+.app-container {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  position: absolute;
+  width: 100%;
+}
+
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Varela Round', sans-serif;
+  padding: 0;
+  height: 100vh;
+  color: var(--color-text);
+}
+
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.main-nav {
+  background: var( --color-gradient);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  padding: 0 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  color: rgba(40, 40, 41, 0.8);
+  animation: generalfade 1s  ease-in-out;
+}
+
+.main-nav a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: rgba(40, 40, 41, 0.8);
+}
+
+.main-nav > * {
+  transition: 0.2s;
+}
+
+.main-nav > *:hover {
+  color: var(--color-hover);
+}
+
+.profile-icon {
+  height: 6rem;
+}
+
+/*show text on profile icon hover start*/
+.main-nav-icon::before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 4rem;
+  left: 3.5rem;
+  font-size: 0.7rem;
+  transition: opacity 0.5s ease-in-out;
+  color: rgba(34, 33, 33, 0.5);
+}
+
+.main-nav-icon:hover:before {
+   opacity: 1;
+  visibility: visible;
+}
+
+/*show text on profile icon hover end*/
+
+.media-icons-container {
+  background-color: var(--color-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  gap: 5rem;
+  padding-bottom: 2rem;
+  animation: generalfade 1s  ease-in-out;
+}
+
+.media-icons-container > * {
+  font-size: 1.5rem;
+  color: var(--color-icon);
+}
+
+.media-icons-container > *:hover {
+  color: var( --color-hover);
+}
+
+/*general fade-in animation */ 
+@keyframes generalfade {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+
+
+/*---TABLET SIZE*/
+@media screen and (max-width: 1000px) and (min-width: 600px) and (min-height: 700px) {
+  .main-nav {
+    gap: 0.5rem;
+    padding: 0 2rem;
+  }
+
+  .main-nav a {
+    font-size: 1rem;
+  }
+
+  .media-icons-container {
+    position: absolute;
+  }
+
+  .media-icons-container > *{
+    font-size: 2rem;
+  }
+
+  /*show text on profile icon hover: disable for tablet*/
+  .main-nav-icon::before {
+    content: attr(data-hover);
+    display: none;
+  }
+}
+
+/*---MOBILE SIZE*/
+@media screen and (min-width: 270px) and (max-width: 550px) {
+  .main-nav {
+    height: 4rem;
+    padding: 0 1.5rem;
+  }
+  .main-nav a {
+    display: none;
+  }
+
+  .main-nav a.main-nav-icon {
+    display: block;
+  }
+
+  .media-icons-container {
+    gap: 2rem;
+
+  }
+  .media-icons-container > * {
+    font-size: 1.3rem;
+  }
+
+   /*show text on profile icon hover: disable for mobile*/
+   .main-nav-icon::before {
+    content: attr(data-hover);
+    display: none;
+  }
+
+  .profile-icon {
+    height: 5rem;
+  }
+
+}
+
+/*---MOBILE SIZE FLIP---*/
+@media screen and (min-height: 275px) and (max-height: 450px) {
+  .media-icons-container {
+    position: relative;
+  }
+
+  /*show text on profile icon hover: disable*/
+  .main-nav-icon::before {
+    content: attr(data-hover);
+    display: none;
+  }
+}
+

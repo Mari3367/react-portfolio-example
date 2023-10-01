@@ -1,0 +1,177 @@
+.about-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 5rem 0;
+    animation: generalfade 1s  ease-in-out;
+}
+
+.about-header {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+.text-about {
+    padding: 0 20rem;
+    line-height: 3rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid var(--color-text);
+    padding-bottom: 1.5rem !important;
+}
+
+.skills-wrapper {
+    display: flex;
+    gap: 2rem;
+}
+
+
+.skills-header {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    font-weight: lighter;
+}
+
+
+.skill {
+    line-height: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.cv-wrapper {
+    background-color: var(--color-btn);
+    padding: 1rem 2rem;
+    margin: 2rem;
+    border-radius: 10px;
+}
+
+.cv-wrapper:hover {
+    background-color: var( --color-hover);
+
+}
+.cv-wrapper a {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+
+/*---TABLET SIZE*/
+@media screen and (max-width: 1300px) and (min-width: 571px){ /**/
+    .about-container {
+        margin: 0;
+    }
+    .text-about {
+        font-size: 1.8rem;
+        padding: 0 5rem;
+    }
+
+    .skills-header {
+        font-size: 1.7rem;
+        margin-top: 2rem;
+    }
+    
+    .skill {
+        line-height: 2rem;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .cv-container {
+        margin-top: 2rem;
+    }
+    .cv-wrapper {
+        margin: 0;
+    }
+  }
+  
+  /*---MOBILE SIZE*/
+  @media screen and (min-width: 270px) and (max-width: 570px){
+    .about-container{
+        padding: 38rem 0;
+        padding-bottom: 40rem;
+    }
+    
+    p.text-about {
+        font-size: 1.3rem;
+        padding: 0 1.2rem;
+    }
+    
+    .skills-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2;
+    }
+
+    .cv-container {
+        margin-bottom: 2rem;
+    }
+
+    .cv-wrapper a {
+        font-size: 1.2rem;
+        color: white;
+    }
+
+    .skills-header {
+        font-size: 1.7rem;
+    }
+    
+    .skill {
+        line-height: 2rem;
+        text-align: center;
+        font-size: 1.3rem;
+    }
+
+  }
+
+
+  /*Larger screen*/
+  @media screen  and (min-width: 901px) and (min-height: 700px){ /*(prev. value min-height: 800px) */
+
+    .text-about{
+        padding: 0 10rem;
+    } 
+
+    .about-header{
+        margin-bottom: 4rem;
+        font-size: 3rem;
+    }
+
+    .skills-header{
+        margin-top: 1rem;
+        margin-bottom: 4rem;
+        font-size: 2rem;
+    }
+
+    .skill{
+        font-size: 1.7rem;
+    }
+
+}
+
+  /*---MOBILE DESIGN FLIP*/
+
+@media screen and (min-height: 275px) and (max-height: 890px){ /*previous value max-height 540px change into 890px*/
+    .about-container{
+        justify-content: unset;
+        height: 100%;
+        padding: 0;
+    }
+
+    .about-header {
+        margin-top: 10rem;
+    }
+
+    .skills-wrapper {
+        padding-bottom: 5rem;
+    }
+
+    .cv-container {
+        margin-bottom: 5rem;
+    }
+}

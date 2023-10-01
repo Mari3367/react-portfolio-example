@@ -1,0 +1,249 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: var(--color-bg);
+    height: 100vh;
+    animation: generalfade 0.5s  ease-in-out;
+}
+
+.profile-image {
+    height: 23rem;
+    margin-top: 5rem;
+    animation: floating3 5s infinite ease-in-out;
+}
+
+
+.home-text-wrapper {
+    text-align: center;
+    margin: 0;
+    padding: 0 12rem;
+}
+
+.home-name-text {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.home-text {
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+}
+
+.diamondHome {
+    position: absolute;
+    color: rgba(162, 244, 244, 0.4);
+    font-size: 14vw;
+    transition: color 500ms;
+    margin: 0;
+    padding: 0;
+}
+
+
+.diamondHome1 {
+    top: 30%;
+    left: 25%;
+    animation: floating 5s infinite ease-in-out;
+}
+
+.diamondHome1:hover {
+    color: rgba(162, 244, 244, 0.9);
+}
+
+
+.diamondHome2 {
+    top: 25%;
+    left: 18%;
+    animation: floating2 5s infinite ease-in-out;
+}
+
+.diamondHome2:hover {
+    color: rgba(162, 244, 244,  0.9);
+}
+
+.diamondHome3 {
+    top: 30%;
+    right: 25%;
+    animation: floating 5s infinite ease-in-out;
+}
+
+.diamondHome3:hover {
+    color: rgba(162, 244, 244,  0.9);
+}
+
+
+.diamondHome4 {
+    top: 25%;
+    right: 18%;
+    animation: floating2 5s infinite ease-in-out;
+
+}
+
+.diamondHome4:hover {
+    color: rgba(162, 244, 244,  0.9);
+}
+
+
+/*animation for diamonds*/
+
+    @keyframes floating {
+        0% { transform: translate(0,  0px); }
+        50%  { transform: translate(0, -15px); }
+        100%   { transform: translate(0, -0px); }   
+    }
+
+    @keyframes floating2 {
+        0% { transform: translate(0,  0px); }
+        50%  { transform: translate(0, 20px); }
+        100%   { transform: translate(0, -0px); }   
+    }
+
+    /*animation for profile picture*/
+    @keyframes floating3 {
+        0% { transform: translate(0,  0px); }
+        50%  { transform: translate(0, 10px); }
+        100%   { transform: translate(0, -0px); }   
+    }
+
+ 
+
+/*---TABLET SIZE*/
+@media screen and (max-width: 1000px) and (max-height: 1180px) {
+    .home-container {
+        justify-content: center;
+        gap: 2rem;
+    }
+    .profile-image {
+        min-height: 20rem;
+        margin-top: 7rem;
+    }
+    .home-text-wrapper {
+        bottom: 10rem;
+        padding: 0 5rem;
+    }
+
+    .home-text-wrapper .home-text {
+        font-size: 1.8rem;
+        line-height: 2rem;
+        margin-bottom: 6rem;
+    }
+
+    .home-name-text {
+        margin-bottom: 2rem;
+    }
+
+    .diamondHome {
+        display: none;
+    }
+  }
+
+  
+  /*---MOBILE SIZE---*/
+  @media screen and (min-width: 270px) and (max-width: 550px) and (max-height: 920px) {
+    .home-container {
+        justify-content: center;
+        gap: 3rem; 
+    }
+
+    .profile-image {
+        min-height: 10rem;
+        margin-bottom: 3rem;
+        margin: 0;
+        margin-top: 6rem; 
+        animation: none;
+    }
+
+    .home-text-wrapper {
+        padding: 0 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .home-text-wrapper .home-text {
+        font-size: 1.3rem;
+        line-height: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .home-name-text  {
+        font-size: 1.4rem;
+    }
+
+    .home-name-text {
+        margin-bottom: 1.5rem;
+    }
+
+    .diamondHome {
+        display: none;
+    }
+
+  }
+
+  /*---MOBILE FLIP---*/
+
+  @media screen and (min-height: 275px) and (max-height: 650px) {
+    .home-container {
+        justify-content: space-between;
+        gap: 0;
+        height: 100%;
+    }
+    .profile-image {
+        height: 15rem;
+        margin-top: 7rem;
+        margin-bottom: 2rem;
+    }
+    .home-text-wrapper {
+        bottom: 0;
+        padding: 0 5rem;
+    }
+
+    .home-text-wrapper .home-text {
+        font-size: 1.7rem;
+        color: var(--color-text);
+        line-height: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .home-name-text {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+    }
+
+    .diamondHome {
+        display: none;
+    }
+  }
+
+
+   @media screen and (min-width: 717px) and (max-width:750) {
+    .profile-image {
+        height: 15rem;
+        margin-top: 25rem;
+    }
+
+    .diamondHome {
+        display: none;
+    }
+  }  
+  
+/* Larger Screen e.g. Surface Pro 7*/
+
+@media screen and (min-height: 1180px) {
+  
+    .home-container {
+        justify-content: center;
+        gap: 5rem;
+    }
+
+    .profile-image {
+        height: 30rem;
+        margin-top: 15rem;
+    }
+
+}
