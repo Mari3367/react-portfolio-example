@@ -29,9 +29,11 @@ h2.illustrations-header {
 
 .illustration {
     width: 38rem;
+    height: 38rem;
     box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
     transition: 0.3s;
     border-radius: 5px;
+    object-fit: cover;
 }
 
 .ill-title {
