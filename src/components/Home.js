@@ -1,23 +1,58 @@
-import profileImage from '../assets/profile-image.svg';
+import { Link } from 'react-router-dom';
 import './home.css'
-import MediaIcons from './MediaIcons';
-import {ImDiamonds} from 'react-icons/im';
+import littleLemon from '../assets/little-lemon.png';
 
 
 const Home = () => {
     return(
         <div className='home-container'>
-            <div className='diamondHome diamondHome1'><ImDiamonds /></div>
-            <div className='diamondHome diamondHome2'><ImDiamonds /></div>
-            <div className='diamondHome diamondHome3'><ImDiamonds /></div>
-            <div className='diamondHome diamondHome4'><ImDiamonds /></div>
-            <img src={profileImage} alt='profile' className='profile-image'/>
             <div className='home-text-wrapper'>
-                 <h3 className='home-name-text'> Hi, I'm Mariam.</h3>
-                <p className='home-text'>I am a front-end developer and illustrator.
+                <h4 className='home-name-text'> Hi, I'm Mariam.</h4>
+                <h2 className='profession-header'>FRONTEND DEVELOPER</h2>
+                <p className='home-text'>
                 Art and technology are my passion.</p>
             </div>
-            <MediaIcons />
+            <div className='home-about-wrapper'>
+                <h3><Link to='/about'>About me</Link></h3>
+                <div className='underline'></div>
+                <h5>I am a self-driven web developer with over 3 years of experience in developing landing pages and websites.</h5>
+                <p>Through years of experience, I have mastered the skills and tools to fulfill client requirements according to the latest trends. I've spent most of these years working across different areas of web development, such as front-end development, landing pages, testing. Having worked on various projects I can help you with the best possible suggestions and ideas that we can proceed with. My goal is to provide quality work that meets the client's expectations.</p>
+            </div>
+            <div className='home-skills-wrapper'>
+                <h3><Link to='/about'>Skills</Link></h3>
+                <div className='bar-wrap'>
+                    <div className='bar bar-1'><span>JavaScript</span> <span>80%</span></div>
+                </div>
+                <div className='bar-wrap'>
+                    <div className='bar bar-2'><span>HTML</span> <span>90%</span></div>
+                </div>
+                <div className='bar-wrap'>
+                    <div className='bar bar-3'><span>CSS</span> <span>80%</span></div>
+                </div>
+                <div className='bar-wrap'>
+                    <div className='bar bar-4'><span>React</span> <span>50%</span></div>
+                </div>
+            </div>
+            <div className='home-my-projects'>
+                <h3><Link to='/projects'>My Projects</Link></h3>
+                <div className='home-projects-wrap'>
+                    <div className='home-projects-card'>
+                        <img src={littleLemon} alt=''/>
+                    </div>
+                    <div className='home-projects-card'>
+                        <img src={littleLemon} alt=''/>
+                    </div>
+                </div>
+            </div>
+            <div className='home-services'>
+                <h3><Link to='/projects'>Services</Link></h3>
+                <ul>
+                    <li>Web Development</li>
+                    <li>App Development</li>
+                    <li>UX/UI Design</li>
+                </ul>
+                <button><Link to='/projects'>Learn more</Link></button>
+            </div>
         </div>
     );
 };

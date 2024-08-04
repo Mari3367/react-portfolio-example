@@ -7,11 +7,12 @@ import About from './components/About';
 import Contact from './components/Contact';
 import WebProject from './components/WebProject';
 import Illustrations from './components/Illustrations';
-import {BsMoon} from 'react-icons/bs';
-import {FaRegSun} from 'react-icons/fa';
-import profileIcon from './assets/profile-icon.svg';
+import { FaMoon } from "react-icons/fa6";
+import { MdSunny } from "react-icons/md";
 import FloatNav from './components/FloatNav';
 import useLocalStorage from 'use-local-storage';
+import MediaIcons from './components/MediaIcons';
+
 
 
 function App() {
@@ -22,20 +23,16 @@ function App() {
     setTheme(newTheme);
   }
 
-/*on nav logo click scroll to top*/
-const scrollTop = () => {
-  window.scrollTo(0,0);
-}
+
 
   return (
    <div className='app-container' id='top' alt='go up' data-theme={theme}>
     <nav className='main-nav'>
-      <div onClick={scrollTop} id='nav-logo' className='main-nav-icon' data-hover='TOP'><img src={profileIcon} alt='profile icon' className='profile-icon'/></div>
       <Link to='/'>HOME</Link>
       <Link to='/projects'>PROJECTS</Link>
       <Link to='/about'>ABOUT ME</Link>
       <Link to='/contact'>CONTACT</Link>
-      <div className='mode' onClick={switchTheme}>{theme === 'dark' ? <FaRegSun /> : <BsMoon />}</div>
+      <div className='mode' onClick={switchTheme}>{theme === 'dark' ? <MdSunny /> : <FaMoon />}</div>
     </nav>
     <FloatNav />
     <Routes>
@@ -46,6 +43,9 @@ const scrollTop = () => {
       <Route path='/webproject' element={<WebProject />}></Route>
       <Route path='/illustrations' element={<Illustrations />}></Route>
     </Routes>
+    <footer>
+     <MediaIcons />
+    </footer>
    </div>
   );
 }
