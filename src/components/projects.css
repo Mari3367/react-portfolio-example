@@ -7,18 +7,29 @@
     gap: 2rem;
     background-color: var(--color-bg);
     animation: generalfade 0.5s  ease-in-out;
-
 }
 
 h2.projects-header {
     font-size: 2.5rem;
-    margin-bottom: 2rem;
     font-weight: lighter;
+    font-family: var(--dont-header);
+}
 
+.projects-container hr {
+    width: 50%;
+    border-color: var(--color-text);
 }
 
 .projects-par {
     font-size: 1.5rem;
+}
+
+.p-links-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .project-link {
@@ -29,103 +40,6 @@ h2.projects-header {
     color: var(--color-hover);
 }
 
-.diamondProject {
-    position: absolute;
-    color: rgba(162, 244, 244, 0.4);
-    transition: color 500ms;
-}
-
-.diamondProject1 {
-    top: 40%;
-    left: 22%;
-    animation: floatingP 5s infinite ease-in-out;
-    font-size: 10vw;
-
-}
-
-.diamondProject1:hover {
-    color: rgba(162, 244, 244,  0.9);
-}
-
-
-.diamondProject2 {
-    top: 20%;
-    left: 18%;
-    animation: floatingP2 5s infinite ease-in-out;
-    font-size: 13vw;
-
-}
-
-.diamondProject2:hover {
-    color: rgba(162, 244, 244,  0.9);
-}
-
-.diamondProject3 {
-    top: 40%;
-    right: 22%;
-    animation: floatingP 5s infinite ease-in-out;
-    font-size: 10vw;
-
-}
-
-.diamondProject3:hover {
-    color: rgba(162, 244, 244,  0.9);
-}
-
-.diamondProject4 {
-    top: 20%;
-    right: 18%;
-    animation: floatingP2 5s infinite ease-in-out;
-    font-size: 13vw;
-
-}
-
-.diamondProject4:hover {
-    color: rgba(162, 244, 244,  0.9);
-}
-
-.diamondProject5 {
-    top: 40%;
-    right: 15%;
-    animation: floatingP3 5s infinite ease-in-out;
-    font-size: 8vw;
-
-}
-
-.diamondProject5:hover {
-    color: rgba(162, 244, 244,  0.9);
-}
-
-.diamondProject6 {
-    top: 40%;
-    left: 15%;
-    animation: floatingP3 5s infinite ease-in-out;
-    font-size: 8vw;
-
-}
-
-.diamondProject6:hover {
-    color: rgba(162, 244, 244,  0.9);
-}
-
-/*animation project diamonds*/
-@keyframes floatingP {
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0, 30px); }
-    100%   { transform: translate(0, -0px); }   
-}
-
-@keyframes floatingP2 {
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0, 15px); }
-    100%   { transform: translate(0, -0px); }   
-}
-
-@keyframes floatingP3 {
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0, 50px); }
-    100%   { transform: translate(0, -0px); }   
-}
 
 /*---TABLET SIZE*/
 @media screen and (max-width: 920px) {
@@ -135,7 +49,6 @@ h2.projects-header {
     .projects-par {
         font-size: 2rem;
     }
-    .diamondProject {display: none;}
 
   }
 
@@ -149,7 +62,6 @@ h2.projects-header {
         font-size: 1.2rem;
     }
 
-    .diamondProject {display: none;}
   }
 
     /*---MOBILE SIZE FLIP*/
@@ -159,9 +71,9 @@ h2.projects-header {
         padding: 0;
         padding-bottom: 5rem;
     }
-    
+
     h2.projects-header {
-         margin-top: 7rem; 
+         margin-top: 7rem;
         font-size: 2rem;
         margin-bottom: 0;
     }
@@ -171,5 +83,4 @@ h2.projects-header {
         margin-bottom: 0;
     }
 
-    .diamondProject {display: none;}
   }

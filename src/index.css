@@ -3,7 +3,7 @@
 
 :root {
   --color-bg: radial-gradient(circle, rgba(238,174,202,0.5) 0%, rgba(148,187,233,1) 100%);
-  --color-gradient: linear-gradient(0deg, rgba(193,234,244,0.96) 29%, rgba(234,208,246,0.96) 80%);
+  --color-gradient: linear-gradient(0deg, rgb(190 225 247 / 96%) 29%, rgb(228 189 246 / 96%) 80%);
   --color-text: rgb(20, 45, 62);
   --color-hover: rgb(242, 249, 255);
   --color-btn: rgba(102, 222, 215, 0.6);
@@ -91,6 +91,7 @@ a {
   top: 0;
   animation: generalfade 1s  ease-in-out;
   background: var(--nav-bg);
+  backdrop-filter: blur(10px);
 }
 
 .main-nav a {

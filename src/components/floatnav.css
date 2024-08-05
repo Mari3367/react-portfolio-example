@@ -11,6 +11,7 @@
     display: none;
     position: fixed;
     padding: 0 2rem;
+    backdrop-filter: blur(10px);
 }
 
 .float-nav-wrapper {
