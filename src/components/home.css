@@ -80,19 +80,18 @@
 }
 
 .bar-wrap {
-    background-color: rgba(144, 140, 170, 0.3);
+    background: linear-gradient(0deg, rgba(52,70,119,0.0313375350140056) 6%, rgba(102,95,153,0.3691526610644257) 52%);;
     width: 80vw;
     text-align: center;
     border-radius: 20px;
-    height: 2rem;
-    box-shadow: 0px 10px 19px -4px rgba(0,0,0,0.75);
+    height: 2.5rem;
+    box-shadow: 0px 10px 19px -4px rgba(0,0,0,0.2);
 }
 
 .bar {
-    background-color: var(--main-color);
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    height: 2rem;
+    background: var(--bar-color);
+    border-radius: 20px;
+    height: 2.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -112,11 +111,11 @@
 }
 
 .bar-3{
-    width: 80%;
+    width: 75%;
 }
 
 .bar-4{
-    width: 50%;
+    width: 60%;
 }
 
 
@@ -140,18 +139,34 @@
 }
 
 .home-projects-card {
-    box-shadow: 0px 10px 19px -4px rgba(0,0,0,0.75);
-    transition: transform .5s;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-.home-projects-card:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 10px 19px -4px rgba(0,0,0,0.5);
-}
+
 
 .home-projects-card img {
     height: 300px;
     width: 400px;
+    transition: transform .5s;
+}
+
+.home-projects-card img:hover {
+    transform: scale(1.1);
+}
+
+.home-pr-github-wrap {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    margin-bottom: 1.2rem;
+    opacity: .8;
+    transition: .2s;
+}
+
+.home-pr-github-wrap:hover {
+    opacity: 1;
 }
 
 .home-services{
@@ -232,11 +247,11 @@
     }
 
     .bar-3{
-        width: 60%;
+        width: 50%;
     }
 
     .bar-4{
-        width: 30%;
+        width: 40%;
     }
 
       .home-projects-wrap {
@@ -302,6 +317,7 @@
 
     .bar {
         height: 1.5rem;
+        gap: 1.5rem;
     }
 
     .home-projects-card img {
@@ -309,9 +325,6 @@
         width: 300px;
     }
 
-    .bar {
-        gap: 1.5rem;
-    }
 
     .bar-1{
         width: 40%;
@@ -322,11 +335,11 @@
     }
 
     .bar-3{
-        width: 40%;
+        width: 35%;
     }
 
     .bar-4{
-        width: 25%;
+        width: 30%;
     }
 
     .bar span {
@@ -384,12 +397,12 @@
     .diamondHome {
         display: none;
     }
-  }  
-  
+  }
+
 /* Larger Screen e.g. Surface Pro 7*/
 
 @media screen and (min-height: 1180px) {
-  
+
     .home-container {
         justify-content: center;
         gap: 5rem;

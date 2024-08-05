@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import './home.css'
 import littleLemon from '../assets/little-lemon.png';
+import { FaArrowRightLong } from "react-icons/fa6";
+
 
 
 const Home = () => {
@@ -27,21 +29,27 @@ const Home = () => {
                     <div className='bar bar-2'><span>HTML</span> <span>90%</span></div>
                 </div>
                 <div className='bar-wrap'>
-                    <div className='bar bar-3'><span>CSS</span> <span>80%</span></div>
+                    <div className='bar bar-3'><span>CSS</span> <span>70%</span></div>
                 </div>
                 <div className='bar-wrap'>
-                    <div className='bar bar-4'><span>React</span> <span>50%</span></div>
+                    <div className='bar bar-4'><span>React</span> <span>60%</span></div>
                 </div>
             </div>
             <div className='home-my-projects'>
                 <h3><Link to='/projects'>My Projects</Link></h3>
                 <div className='home-projects-wrap'>
-                    <div className='home-projects-card'>
-                        <img src={littleLemon} alt=''/>
-                    </div>
-                    <div className='home-projects-card'>
-                        <img src={littleLemon} alt=''/>
-                    </div>
+                    <Link to='/about'>
+                        <div className='home-projects-card'>
+                            <img src={littleLemon} alt=''/>
+                            <div className='home-pr-github-wrap'><span>Github</span><FaArrowRightLong /></div>
+                        </div>
+                    </Link>
+                    <Link to='/about'>
+                        <div className='home-projects-card'>
+                            <img src={littleLemon} alt=''/>
+                            <div className='home-pr-github-wrap'><span>Github</span><FaArrowRightLong /></div>
+                        </div>
+                    </Link>
                 </div>
             </div>
             <div className='home-services'>
