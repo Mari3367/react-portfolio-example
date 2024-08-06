@@ -19,12 +19,11 @@ const WebProject = () => {
     return(
         <div className='web-project-container'>
             <h2 className='webprojects-header'>WEB DEVELOPMENT</h2>
+            <div className='underline'></div>
             <div className='cards-wrapper'>
               {projectsList.map((project) => {
                  return <div className='web-project-card' key={project.title}>
-                            <h3 className='webprojects-title'>{project.title}</h3>
                             <img src={project.img} alt='software sample' className='projectImage'/>
-                            <p className='project-text'>{project.description}</p>
                             <button className='github-button'><a href={project.link} target='_blank' rel='noreferrer'>Github</a></button>
                         </div>
               })}
