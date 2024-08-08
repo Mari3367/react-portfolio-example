@@ -2,11 +2,9 @@ import './App.css';
 import {Routes, Route} from 'react-router-dom';
 import {Link} from 'react-router-dom';
 import Home from './components/Home';
-import Projects from './components/Projects';
+import { Projects } from './components/Projects';
 import About from './components/About';
 import Contact from './components/Contact';
-import WebProject from './components/WebProject';
-import Illustrations from './components/Illustrations';
 import { FaMoon } from "react-icons/fa6";
 import { MdSunny } from "react-icons/md";
 import FloatNav from './components/FloatNav';
@@ -40,8 +38,6 @@ function App() {
       <Route path='/projects' element={<Projects />}></Route>
       <Route path='/about' element={<About />}></Route>
       <Route path='/contact' element={<Contact />}></Route>
-      <Route path='/webproject' element={<WebProject />}></Route>
-      <Route path='/illustrations' element={<Illustrations />}></Route>
     </Routes>
     <footer>
      <MediaIcons />
