@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import './home.css'
 import littleLemon from '../assets/little-lemon.png';
+import rastaPasta from '../assets/rasta-pasta.png';
 import { FaArrowRightLong } from "react-icons/fa6";
 
 
@@ -38,18 +39,18 @@ const Home = () => {
             <div className='home-my-projects'>
                 <h3><Link to='/projects'>My Projects</Link></h3>
                 <div className='home-projects-wrap'>
-                    <Link to='/about'>
+                    <a href='https://github.com/Mari3367/react-booking-app' target='blank'>
                         <div className='home-projects-card'>
                             <img src={littleLemon} alt=''/>
                             <div className='home-pr-github-wrap'><span>Github</span><FaArrowRightLong /></div>
                         </div>
-                    </Link>
-                    <Link to='/about'>
+                    </a>
+                    <a href='https://github.com/Mari3367/next-restaurant' target='blank'>
                         <div className='home-projects-card'>
-                            <img src={littleLemon} alt=''/>
+                            <img src={rastaPasta} alt=''/>
                             <div className='home-pr-github-wrap'><span>Github</span><FaArrowRightLong /></div>
                         </div>
-                    </Link>
+                    </a>
                 </div>
             </div>
             <div className='home-services'>
@@ -59,7 +60,7 @@ const Home = () => {
                     <li>App Development</li>
                     <li>UX/UI Design</li>
                 </ul>
-                <button><Link to='/projects'>Learn more</Link></button>
+                <button><Link to='/about'>Learn more</Link></button>
             </div>
         </div>
     );
